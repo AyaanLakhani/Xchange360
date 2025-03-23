@@ -15,6 +15,7 @@ function Login() {
       axios.post('http://localhost:5000/api/users',{
         userId: user.id,
         wallet: user.wallet?.address,
+        phoneNumber: user.phone?.number,
         email: user.email?.address,
         linkedAccounts: user.linkedAccounts,
       }).then(() => {
