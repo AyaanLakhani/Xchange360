@@ -15,13 +15,14 @@ const userSchema = new mongoose.Schema({
   userId: String,
   wallet: String,
   email: String,
+  phoneNumber: String, //Added the phone number scheme to track the phone login method.
   linkedAccounts: Object,
 });
 
 const User = mongoose.model('User', userSchema);
 
 app.post('/api/users', async (req, res) => {
-  const { userId, wallet, email, linkedAccounts } = req.body;
+  const { userId, wallet, email, phone, linkedAccounts } = req.body; //added phone.
 
   try {
     const existing = await User.findOne({ userId });
@@ -29,10 +30,11 @@ app.post('/api/users', async (req, res) => {
     if (existing) {
       existing.wallet = wallet;
       existing.email = email;
+      existing.phoneNumber = phone; //Checks for existing phone number.
       existing.linkedAccounts = linkedAccounts;
       await existing.save();
     } else {
-      await User.create({ userId, wallet, email, linkedAccounts });
+      await User.create({ userId, wallet, email, phone, linkedAccounts }); //Added 'phone'
     }
 
     res.status(200).send('User saved/updated');
