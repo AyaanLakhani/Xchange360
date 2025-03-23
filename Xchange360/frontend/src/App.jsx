@@ -1,9 +1,9 @@
 // src/App.jsx
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'; // Import necessary components
-import Navbar from './Navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Login';
 import Providers from './Providers';
+import Homepage from './Homepage';
 import './App.css';
 
 function App() {
@@ -11,25 +11,14 @@ function App() {
     <Providers>
       <BrowserRouter>
         <div>
-          <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Homepage />} />
             <Route path="/login" element={<Login />} />
+            {/* Add other routes if needed */}
           </Routes>
         </div>
       </BrowserRouter>
     </Providers>
-  );
-}
-
-function Home() {
-  return (
-    <div style={{ padding: '20px' }}>
-      <h1>Welcome to Xchange360</h1>
-      <p>This is your homepage content.</p>
-      
-      <Login/>
-    </div>
   );
 }
 
