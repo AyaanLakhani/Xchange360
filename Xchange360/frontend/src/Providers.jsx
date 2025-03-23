@@ -9,7 +9,7 @@ export default function Providers({ children }) {
       // clientId="your-app-client-id" // Uncomment and replace with your actual Client ID if needed
       config={{
         appearance: {
-          loginMethods: ['email', 'wallet'],
+          loginMethods: ['email', 'wallet', 'phone'], //Added login by phone option.
           theme: 'dark',
           accentColor: '#676FFF',
           logo: 'https://your-logo-url' // Replace with your actual logo URL
