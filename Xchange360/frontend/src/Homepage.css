@@ -54,7 +54,7 @@ body {
   
   .main-nav a  {
     text-decoration: none;
-    color: #555;
+    color: black;
     transition: color 0.3s ease;
     background: none;
     border: none;
@@ -72,7 +72,7 @@ body {
   /* Specific styles for the login button */
 .main-nav .login-button {
   background-color: #89ebde; /* Set the background color to blue */
-  color: rgb(4, 4, 4); /* Set the text color to white */
+  color: black; /* Set the text color to white */
   padding: 10px 15px; /* Add some padding for better appearance */
   border-radius: 20px; /* Add rounded corners */
   display: flex;
@@ -100,30 +100,31 @@ body {
   .hero-headline {
     font-size: 3rem;
     margin-bottom: 15px;
-    color: #222;
+    color: #5e6f9a;
   }
   
   .hero-subheadline {
     font-size: 1.1rem;
-    color: #666;
+    color: black;
     margin-bottom: 30px;
   }
   
-  .read-more-button {
-    background-color: #f0f0f0;
-    color: #333;
+  .hero-cta-button {
+    background-color: #89ebde; /* Example blue color */
+    color: black;
     padding: 15px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    margin-top: 5px; /* Add some space above the button */
   }
   
-  .read-more-button:hover {
-    background-color: #e0e0e0;
+  .hero-cta-button:hover {
+    background-color: #96d1c9; /* Darker blue on hover */
   }
-  
+
   .hero-image-container {
     width: 50%;
   }
