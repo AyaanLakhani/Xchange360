@@ -9,8 +9,10 @@ export default function Providers({ children }) {
       // clientId="your-app-client-id" // Uncomment and replace with your actual Client ID if needed
       config={{
         appearance: {
-          loginMethods: ['email', 'wallet'],
+
+          loginMethods: ['email', 'wallet', 'phone'],
           theme: 'light',
+            
           accentColor: '#676FFF',
           logo: '/360Logo.jpg' // Replace with your actual logo URL
         },
