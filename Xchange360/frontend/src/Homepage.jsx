@@ -35,8 +35,9 @@ function Home() {
         <div className="hero-text">
           <h1 className="hero-headline">OUR LOYALTY PROGRAM</h1>
           <p className="hero-subheadline">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
+          A blockchain-based loyalty exchange program where users can collect, exchange, and redeem tokens for rewards offered by different restaurants and fast-food chains.
           </p>
+          <button onClick={login} className="hero-cta-button">Join Now</button>
         </div>
         <div className="hero-image-container">
           <img src="/bg.jpg" alt="Loyalty Program Illustration" className="hero-image" />
