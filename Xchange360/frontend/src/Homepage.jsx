@@ -10,8 +10,9 @@ function Home() {
     <div className="homepage-container">
       <header className="main-header">
         <div className="logo-container">
-          <img src="/your-logo.png" alt="Your Company Logo" className="logo" />
-          <span className="company-name">Your Company</span>
+          <img src="/360Logo.jpg" alt="Your Company Logo" className="logo" />
+          <span style={{ color: '#5e6f9a', fontWeight: 'bold', marginRight: '1px' }}>Xchange</span>
+          <span style={{ color: '#89ebde', fontWeight: 'bold' }}>360</span>
         </div>
         <nav className="main-nav">
           <ul>
@@ -38,7 +39,7 @@ function Home() {
           </p>
         </div>
         <div className="hero-image-container">
-          <img src="/food.jpg" alt="Loyalty Program Illustration" className="hero-image" />
+          <img src="/bg.jpg" alt="Loyalty Program Illustration" className="hero-image" />
         </div>
       </main>
 
