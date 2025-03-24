@@ -10,9 +10,9 @@ export default function Providers({ children }) {
       config={{
         appearance: {
           loginMethods: ['email', 'wallet'],
-          theme: 'dark',
+          theme: 'light',
           accentColor: '#676FFF',
-          logo: 'https://your-logo-url' // Replace with your actual logo URL
+          logo: '/360Logo.jpg' // Replace with your actual logo URL
         },
         embeddedWallets: {
           createOnLogin: 'users-without-wallets'

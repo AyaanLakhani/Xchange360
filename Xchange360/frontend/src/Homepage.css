@@ -20,9 +20,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px; /* Add horizontal padding for header */
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #eee;
+    padding: 10px 10px; /* Add horizontal padding for header */
+    background-color: #ffffff;
+    
   }
   
   .logo-container {
@@ -31,7 +31,8 @@ body {
   }
   
   .logo {
-    height: 40px; /* Adjust size as needed */
+    height: 90px; /* Adjust size as needed */
+    width: auto;
     margin-right: 10px;
   }
   
@@ -51,7 +52,7 @@ body {
     margin-left: 20px;
   }
   
-  .main-nav a, .login-button {
+  .main-nav a  {
     text-decoration: none;
     color: #555;
     transition: color 0.3s ease;
@@ -59,11 +60,30 @@ body {
     border: none;
     font-size: 1rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
   }
   
-  .main-nav a:hover, .login-button:hover {
-    color: #007bff; /* Example hover color */
+  .main-nav a:hover {
+    color: #05ff33; /* Example hover color */
   }
+
+  /* Specific styles for the login button */
+.main-nav .login-button {
+  background-color: #89ebde; /* Set the background color to blue */
+  color: rgb(4, 4, 4); /* Set the text color to white */
+  padding: 10px 15px; /* Add some padding for better appearance */
+  border-radius: 20px; /* Add rounded corners */
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.main-nav .login-button:hover {
+  background-color: #96d1c9; /* Darker blue on hover for the button background */
+  color: rgb(4, 4, 4); /* Keep text white on hover */
+}
   
   /* Hero Section */
   .hero-section {
@@ -105,7 +125,7 @@ body {
   }
   
   .hero-image-container {
-    width: 45%;
+    width: 50%;
   }
   
   .hero-image {
@@ -127,6 +147,7 @@ body {
     color: #777;
     font-size: 0.9rem;
     border-top: 1px solid #ddd;
+    margin-top: 80px;
   }
   
   /* Responsive Design (Example) */
