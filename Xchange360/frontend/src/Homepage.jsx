@@ -1,6 +1,7 @@
 // src/components/Home.jsx
 import React from 'react';
 import { usePrivy } from '@privy-io/react-auth';
+import { Link } from 'react-router-dom';
 import './Homepage.css';
 
 function Home() {
@@ -16,10 +17,8 @@ function Home() {
         </div>
         <nav className="main-nav">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/news">News</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/Listings">Restaurants</Link></li>
             <li>
               {authenticated ? (
                 <button onClick={logout} className="login-button">Logout</button>
