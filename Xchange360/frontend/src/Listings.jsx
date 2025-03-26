@@ -3,8 +3,8 @@ import './Listings.css';
 
 const Listings = () => {
   const companies = [
-    'Microsoft', 'Nike', 'Adidas', 'Puma', 'Under Armour', 'Samsung', 
-    'Apple', 'Sony', 'Target', 'Walmart'
+    'Ralph Lauren', 'Nike', 'Adidas', 'Puma', 'Under Armour', 'Crocs', 
+    'Skechers', 'Levi Strauss', 'lululemon athletica', 'Fila'
   ];
 
   const [logos, setLogos] = useState([]);
