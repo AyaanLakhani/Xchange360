@@ -18,7 +18,7 @@ function Home() {
         <nav className="main-nav">
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/Listings">Restaurants</Link></li>
+            <li><Link to="/Listings">Companies</Link></li>
             <li>
               {authenticated ? (
                 <button onClick={logout} className="login-button">Logout</button>
