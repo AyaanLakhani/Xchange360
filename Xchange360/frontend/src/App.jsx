@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Login';
 import Providers from './Providers';
 import Homepage from './Homepage';
+import Listings from './Listings';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/listings" element={<Listings />} />
             {/* Add other routes if needed */}
           </Routes>
         </div>
