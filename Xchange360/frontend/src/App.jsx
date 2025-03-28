@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Providers from './Providers';
 import Homepage from './Homepage';
 import Listings from './Listings';
-import './App.css';
+import Profilepage from './Profilepage';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/listings" element={<Listings />} />
+            <Route path="/profilepage" element={<Profilepage/>} />
             {/* Add other routes if needed */}
           </Routes>
         </div>
