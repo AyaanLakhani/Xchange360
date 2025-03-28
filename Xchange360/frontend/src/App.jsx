@@ -5,7 +5,7 @@ import Login from './Login';
 import Providers from './Providers';
 import Homepage from './Homepage';
 import Listings from './Listings';
-import './App.css';
+import Profile from './Profilepage';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/listings" element={<Listings />} />
+            <Route path="/profile" element={<Profile/>} />
             {/* Add other routes if needed */}
           </Routes>
         </div>
