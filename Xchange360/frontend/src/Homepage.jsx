@@ -1,16 +1,43 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { usePrivy } from '@privy-io/react-auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';  // Use useNavigate for navigation
 import './Homepage.css';
+import axios from 'axios';
+import { FaUserCircle } from "react-icons/fa";  // Ensure you import the icon
 
 function Home() {
-  const { login, authenticated, logout } = usePrivy();
-  const navigate = useNavigate(); // Initialize useHistory hook
+  const { login, authenticated, logout, user } = usePrivy();  // Include 'user' here
+  const navigate = useNavigate();  // For navigation
 
-  const navigateToProfile = () => {
+  // Send user data to backend only when authenticated and user is available
+  useEffect(() => {
+    if (authenticated && user) {
+      console.log('Sending user to backend:', {
+        userId: user.id,
+        wallet: user.wallet?.address,
+        phone: user.phone?.number,
+        email: user.email?.address,
+        linkedAccounts: user.linkedAccounts,
+      });
+
+      axios.post('http://localhost:5000/api/users', {
+        userId: user.id,
+        wallet: user.wallet?.address,
+        phone: user.phone?.number,
+        email: user.email?.address,
+        linkedAccounts: user.linkedAccounts,
+      }).then(() => {
+        console.log('User data sent to backend');
+      }).catch(err => {
+        console.error('Error sending user data:', err);
+      });
+    }
+  }, [authenticated, user]);  // Added 'user' as a dependency
+
+  // Function to navigate to profile page
+  const handleProfileClick = () => {
     navigate('/Profilepage');
   };
-
   return (
     <div className="homepage-container">
       <header className="main-header">
@@ -19,17 +46,27 @@ function Home() {
           <span style={{ color: '#5e6f9a', fontWeight: 'bold', marginRight: '1px' }}>Xchange</span>
           <span style={{ color: '#89ebde', fontWeight: 'bold' }}>360</span>
         </div>
+        
         <nav className="main-nav"> 
           <ul className="nav-list">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/Listings">Companies</Link></li>
             {authenticated ? (
               <>
-                <li><button onClick={navigateToProfile} className="profile-button"><img src="/user-icon.png" alt="User Profile" className="user-icon" /></button></li>
-                <li><button onClick={logout} className="login-button">Logout</button></li>
+                {/* Profile button with navigation */}
+                <li>
+                  <button onClick={handleProfileClick} className="profile-button">
+                    <FaUserCircle size={24} />
+                  </button>
+                </li>
+                <li>
+                  <button onClick={logout} className="login-button">Logout</button>
+                </li>
               </>
             ) : (
-              <li><button onClick={login} className="login-button">Login</button></li>
+              <li>
+                <button onClick={login} className="login-button">Login</button>
+              </li>
             )}
           </ul>
         </nav>

@@ -5,7 +5,7 @@ import Login from './Login';
 import Providers from './Providers';
 import Homepage from './Homepage';
 import Listings from './Listings';
-import Profile from './Profilepage';
+import Profilepage from './Profilepage';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/listings" element={<Listings />} />
-            <Route path="/profile" element={<Profile/>} />
+            <Route path="/profilepage" element={<Profilepage/>} />
             {/* Add other routes if needed */}
           </Routes>
         </div>
